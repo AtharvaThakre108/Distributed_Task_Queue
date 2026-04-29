@@ -38,6 +38,7 @@ services:
       - REDIS_PORT=6379
       - BRPOP_TIMEOUT=5
       - STATS_INTERVAL=30
+      - WORKER_ID=worker-${HOSTNAME}
     depends_on:
       redis:
         condition: service_healthy
